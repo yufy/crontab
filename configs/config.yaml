@@ -1,0 +1,32 @@
+app:
+  Name: crontab
+  Mode: debug
+http:
+  Host: 127.0.0.1
+  Port: 12345
+  ReadTimeout: 30
+  WriteTimeout: 30
+log:
+  Filename: logs/app.log
+  MaxAge: 3
+  MaxSize: 500
+  MaxBackups: 5
+  Level: debug
+  Stdout: true
+etcd:
+  EndPoints:
+  - 127.0.0.1:2379
+  DialTimeout: 5
+worker:
+  Name: worker1
+database:
+  Driver: mysql
+  Host: 127.0.0.1
+  Port: 3306
+  Username: ****
+  Password: ****
+  DBName: crontab
+  Charset: utf8mb4
+  Collation: utf8mb4_general_ci
+  ReadTimeout: 30s
+  WriteTimeout: 30s
